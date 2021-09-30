@@ -44,7 +44,7 @@ public class Practica01{
 
 	/** 
 	* Hace la mezcla de dos arreglos ordenados desde la primera posición hasta
-	* una posición límite
+	* una posición límite en menor tiempo de ejecución
 	* @param array1 el primer arreglo a mezlar
 	* @param n el límite de mezcla del primer arreglo
 	* @param array2 el segundo arreglo a mezclar
@@ -129,7 +129,7 @@ public class Practica01{
 	}
 
 	/**
-    * Verifica si un tablero contiene los números desde 0 hasta n-1 en cada fila y cada columna.
+    * Verifica si un tablero contiene los números desde 0 hasta n-1 en cada fila y cada columna en menor tiempo de ejecución.
     * @param board el tablero de nxn que contiene elementos dentro del rango [0, n-1].
     * @return true si el tablero contiene los números desde 0 hasta n-1 en cada fila y columna,
 	* false en otro caso.
@@ -172,7 +172,7 @@ public class Practica01{
 
 	/**
 	* Rota position cantidad de veces los elementos de un arreglo
-	* hacia el vecino izquierdo.
+	* hacia el vecino izquierdo en menor tiempo de ejecución.
 	* @param num el arreglo de enteros a rotar.
 	* @param position la cantidad de espacios a rotar.
 	*/
@@ -191,6 +191,9 @@ public class Practica01{
 
 		String directorio1 = "src/clases/Tests/ArrayTests/";
 		String directorio2 = "src/clases/Tests/BoardTests/";
+
+		//String directorio1 = "src/clases/Example/ArrayExamples/";
+		//String directorio2 = "src/clases/Example/BoardExamples/";
 
 		// EJEMPLOS DE ACTIVIDAD 1
 		System.out.println("\nEJEMPLOS DE ACTIVIDAD 1\n");
@@ -229,19 +232,19 @@ public class Practica01{
 		inicio = System.currentTimeMillis();
 		int[] resultD = mergeSortedArray(arrayD1, 7000, arrayD2, 8000);
 		fin = System.currentTimeMillis();
-		//System.out.println("Resultado C: "+Arrays.toString(resultC));
+		//System.out.println("Resultado D: "+Arrays.toString(resultD));
 		System.out.println("El algoritmo 1.4 se tardo: "+(fin-inicio)+" milisegundos");
 
 		inicio = System.currentTimeMillis();
 		int[] resultE = mergeSortedArray(arrayE1, 15000, arrayE2, 19000);
 		fin = System.currentTimeMillis();
-		//System.out.println("Resultado C: "+Arrays.toString(resultC));
+		//System.out.println("Resultado E: "+Arrays.toString(resultE));
 		System.out.println("El algoritmo 1.5 se tardo: "+(fin-inicio)+" milisegundos");
 
 		inicio = System.currentTimeMillis();
 		int[] resultF = mergeSortedArray(arrayF1, 30000, arrayF2, 25000);
 		fin = System.currentTimeMillis();
-		//System.out.println("Resultado C: "+Arrays.toString(resultC));
+		//System.out.println("Resultado F: "+Arrays.toString(resultF));
 		System.out.println("El algoritmo 1.6 se tardo: "+(fin-inicio)+" milisegundos");
 
 		// EJEMPLOS DE ACTIVIDAD MEJORADO 1
@@ -268,19 +271,19 @@ public class Practica01{
 		inicio = System.currentTimeMillis();
 		resultD = mergeSortedArrayMejorado(arrayD1, 7000, arrayD2, 8000);
 		fin = System.currentTimeMillis();
-		//System.out.println("Resultado C: "+Arrays.toString(resultC));
+		//System.out.println("Resultado D: "+Arrays.toString(resultD));
 		System.out.println("El algoritmo 1.4 se tardo: "+(fin-inicio)+" milisegundos");
 
 		inicio = System.currentTimeMillis();
 		resultE = mergeSortedArrayMejorado(arrayE1, 15000, arrayE2, 19000);
 		fin = System.currentTimeMillis();
-		//System.out.println("Resultado C: "+Arrays.toString(resultC));
+		//System.out.println("Resultado E: "+Arrays.toString(resultE));
 		System.out.println("El algoritmo 1.5 se tardo: "+(fin-inicio)+" milisegundos");
 
 		inicio = System.currentTimeMillis();
 		resultF = mergeSortedArrayMejorado(arrayF1, 30000, arrayF2, 25000);
 		fin = System.currentTimeMillis();
-		//System.out.println("Resultado C: "+Arrays.toString(resultC));
+		//System.out.println("Resultado F: "+Arrays.toString(resultF));
 		System.out.println("El algoritmo 1.6 se tardo: "+(fin-inicio)+" milisegundos");
 
 
@@ -316,6 +319,7 @@ public class Practica01{
 		System.out.println("El tablero D es válido: "+boardResultD);
 		System.out.println("El algoritmo 2.4 se tardo: "+(fin-inicio)+" milisegundos");
 
+		// Este algoritmo se tarda aproximandamente 320712 = 5.3452 minutos
 		int[][] boardE = ArrayReader.readMatrix(directorio2 + "BoardE.txt");
 		inicio = System.currentTimeMillis();
 		boolean boardResultE = isValidBoard(boardE);
@@ -323,6 +327,7 @@ public class Practica01{
 		System.out.println("El tablero E es válido: "+boardResultE);
 		System.out.println("El algoritmo 2.5 se tardo: "+(fin-inicio)+" milisegundos");		
 
+		// Este algoritmo se tarda aproximandamente 1060418 = 17.67363 minutos
 		int[][] boardF = ArrayReader.readMatrix(directorio2 + "BoardF.txt");
 		inicio = System.currentTimeMillis();
 		boolean boardResultF = isValidBoard(boardF);
@@ -404,14 +409,17 @@ public class Practica01{
 		fin = System.currentTimeMillis();
 		System.out.println("El algoritmo 3.6 se tardo: "+(fin-inicio)+" milisegundos");
 
-		/*System.out.println("Arreglo A1 rotado 5 veces: " + Arrays.toString(arrayA1));
-		System.out.println("Arreglo B1 rotado 0 veces: " + Arrays.toString(arrayB1));
-		System.out.println("Arreglo C1 rotado 6 veces: " + Arrays.toString(arrayC1));*/
+		/*System.out.println("Arreglo A1 rotado 500 veces: " + Arrays.toString(arrayA1));
+		System.out.println("Arreglo B1 rotado 1000 veces: " + Arrays.toString(arrayB1));
+		System.out.println("Arreglo C1 rotado 2000 veces: " + Arrays.toString(arrayC1));
+		System.out.println("Arreglo D1 rotado 3000 veces: " + Arrays.toString(arrayD1));
+		System.out.println("Arreglo E1 rotado 10000 veces: " + Arrays.toString(arrayE1));
+		System.out.println("Arreglo F1 rotado 20000 veces: " + Arrays.toString(arrayF1));*/
 
 		//System.out.println("\n\nFIN DE EJEMPLOS\n");
 
-		// EJEMPLOS DE ACTIVIDAD MEJORADA 3
-		System.out.println("\nEJEMPLOS DE ACTIVIDAD MEJORADA 3\n");
+		// EJEMPLOS DE ACTIVIDAD 3 MEJORADA
+		System.out.println("\nEJEMPLOS DE ACTIVIDAD 3 MEJORADA\n");
 
 		inicio = System.currentTimeMillis();
 		rotateArrayMejorado(arrayA1, 500);
@@ -443,9 +451,12 @@ public class Practica01{
 		fin = System.currentTimeMillis();
 		System.out.println("El algoritmo 3.6 se tardo: "+(fin-inicio)+" milisegundos");
 
-		/*System.out.println("Arreglo A1 rotado 5 veces: " + Arrays.toString(arrayA1));
-		System.out.println("Arreglo B1 rotado 0 veces: " + Arrays.toString(arrayB1));
-		System.out.println("Arreglo C1 rotado 6 veces: " + Arrays.toString(arrayC1));*/
+		/*System.out.println("Arreglo A1 rotado 500 veces: " + Arrays.toString(arrayA1));
+		System.out.println("Arreglo B1 rotado 1000 veces: " + Arrays.toString(arrayB1));
+		System.out.println("Arreglo C1 rotado 2000 veces: " + Arrays.toString(arrayC1));
+		System.out.println("Arreglo D1 rotado 3000 veces: " + Arrays.toString(arrayD1));
+		System.out.println("Arreglo E1 rotado 10000 veces: " + Arrays.toString(arrayE1));
+		System.out.println("Arreglo F1 rotado 20000 veces: " + Arrays.toString(arrayF1));*/
 
 		System.out.println("\n\nFIN DE EJEMPLOS\n");
 	}
