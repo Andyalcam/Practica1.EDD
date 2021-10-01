@@ -1,6 +1,6 @@
 # PRACTICA 01. COMPLEJIDAD
-## Alvarado Camacho Andrea
-## Mondragon Segoviano Alfonso
+## Alvarado Camacho Andrea			318064343
+## Mondragon Segoviano Alfonso		115000957
 
 - - - -
 
